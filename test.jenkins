@@ -1,5 +1,8 @@
 #!groovy
 pipeline {
+  agent {
+    lable 'master'
+  }
   stages {
     stage('create image') {
       steps {
