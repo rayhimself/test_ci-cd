@@ -1,0 +1,12 @@
+#!groovy
+pipeline {
+  stages {
+    stage('create image') {
+      steps {
+        dir ('.') {
+          sh 'docker build .'
+        }
+      }
+    }
+  }
+}
